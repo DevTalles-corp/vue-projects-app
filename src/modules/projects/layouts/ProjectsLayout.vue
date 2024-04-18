@@ -3,7 +3,7 @@
     <!-- Top Menu -->
     <top-menu />
 
-    <main>
+    <main class="flex flex-row">
       <!-- Side Menu -->
       <side-menu />
 
