@@ -1,0 +1,68 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<SideMenu /> > should render with no projects 1`] = `
+"<aside class="bg-base-200 w-72 min-h-screen">
+  <h2 class="text-lg font-bold mx-4">
+    <router-link-stub to="/"></router-link-stub>
+  </h2><!-- Menu -->
+  <ul class="menu">
+    <li>
+      <details>
+        <summary>
+          <router-link-stub to="/project/1"></router-link-stub>
+        </summary>
+        <ul>
+          <li>
+            <router-link-stub to="/project/1"></router-link-stub>
+          </li>
+          <li>
+            <router-link-stub to="/project/1"></router-link-stub>
+          </li>
+          <li>
+            <router-link-stub to="/project/1"></router-link-stub>
+          </li>
+          <li>
+            <router-link-stub to="/project/1"></router-link-stub>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <router-link-stub to="/project/2"></router-link-stub>
+    </li>
+    <li>
+      <details>
+        <summary>
+          <router-link-stub to="/project/3"></router-link-stub>
+        </summary>
+        <ul>
+          <li>
+            <router-link-stub to="/project/3"></router-link-stub>
+          </li>
+          <li>
+            <router-link-stub to="/project/3"></router-link-stub>
+          </li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details>
+        <summary>
+          <router-link-stub to="/project/4"></router-link-stub>
+        </summary>
+        <ul>
+          <li>
+            <router-link-stub to="/project/4"></router-link-stub>
+          </li>
+          <li>
+            <router-link-stub to="/project/4"></router-link-stub>
+          </li>
+          <li>
+            <router-link-stub to="/project/4"></router-link-stub>
+          </li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</aside>"
+`;
