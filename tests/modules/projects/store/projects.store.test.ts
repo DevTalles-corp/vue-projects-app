@@ -55,6 +55,58 @@ describe('useProjectsStore', () => {
       tasks: expect.any(Array),
     });
 
-    expect(store.projects.length).toBe(3);
+    expect(store.projects.length).toBe(4);
+  });
+
+  test('add a task to a project', () => {
+    const store = useProjectsStore();
+    store.addProject('New Project');
+    const project = store.projects.at(0)!;
+    const taskName = 'New Task';
+
+    store.addTaskToProject(project.id, taskName);
+
+    expect(project.tasks.length).toBe(1);
+    expect(project.tasks.at(0)!).toEqual({
+      id: expect.any(String),
+      name: taskName,
+      completedAt: undefined,
+    });
+  });
+
+  test('toggles a task', () => {
+    const store = useProjectsStore();
+    store.addProject('New Project');
+    const project = store.projects.at(0)!;
+    const taskName = 'New Task';
+
+    store.addTaskToProject(project.id, taskName);
+
+    const task = project.tasks.at(0)!;
+
+    store.toggleTask(project.id, task.id);
+
+    expect(task).toEqual({
+      id: expect.any(String),
+      name: taskName,
+      completedAt: expect.any(Date),
+    });
+
+    expect(task.completedAt).toBeInstanceOf(Date);
+  });
+
+  test('should return the projects with completion', () => {
+    const store = useProjectsStore();
+    store.$patch((state) => {
+      state.projects = fakeProjects;
+    });
+
+    // console.log(store.projectsWithCompletion);
+    expect(store.projectsWithCompletion).toEqual([
+      { id: '1', name: 'Project 1', taskCount: 4, completion: 25 },
+      { id: '2', name: 'Project 2', taskCount: 0, completion: 0 },
+      { id: '3', name: 'Project 3', taskCount: 2, completion: 50 },
+      { id: '4', name: 'Project 4', taskCount: 3, completion: 33 },
+    ]);
   });
 });

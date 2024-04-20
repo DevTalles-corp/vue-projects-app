@@ -24,4 +24,13 @@ export const fakeProjects: Project[] = [
       { id: '2', name: 'Task 2', completedAt: new Date() },
     ],
   },
+  {
+    id: '4',
+    name: 'Project 4',
+    tasks: [
+      { id: '1', name: 'Task 1' },
+      { id: '2', name: 'Task 2', completedAt: new Date() },
+      { id: '1', name: 'Task 3' },
+    ],
+  },
 ];
