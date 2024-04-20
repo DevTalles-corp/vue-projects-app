@@ -30,7 +30,7 @@ describe('Main.st', () => {
     expect(vue.createApp).toHaveBeenCalled();
     expect(mountSpy).toHaveBeenCalledWith('#app');
 
-    console.log(useSpy.mock.calls);
+    // console.log(useSpy.mock.calls);
     expect(useSpy).toHaveBeenCalledWith('router');
     expect(useSpy).toHaveBeenCalledWith('pinia');
   });
