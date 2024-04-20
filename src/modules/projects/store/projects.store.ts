@@ -70,6 +70,7 @@ export const useProjectsStore = defineStore('projects', () => {
 
     // Actions
     addProject,
+
     addTaskToProject,
     toggleTask,
   };
